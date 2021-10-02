@@ -1,6 +1,7 @@
 import React from 'react';
 // Pages components
 import Aboutsection from '../components/AboutSection';
+import FaqSection from '../components/FaqSection';
 import ServicesSection from '../components/ServicesSection';
 
 const Aboutus = () => {
@@ -8,6 +9,7 @@ const Aboutus = () => {
         <>
             <Aboutsection />
             <ServicesSection />
+            <FaqSection />
         </>
     );
 }
