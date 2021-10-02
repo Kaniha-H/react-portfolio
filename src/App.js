@@ -1,7 +1,9 @@
+import Aboutus from "./pages/AboutUs";
+
 function App() {
   return (
     <div className="App">
-      <h1>Film</h1>
+      <Aboutus />
     </div>
   );
 }
