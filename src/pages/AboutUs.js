@@ -1,12 +1,14 @@
 import React from 'react';
 // Pages components
 import Aboutsection from '../components/AboutSection';
+import ServicesSection from '../components/ServicesSection';
 
 const Aboutus = () => {
     return (
-        <div>
+        <>
             <Aboutsection />
-        </div>
+            <ServicesSection />
+        </>
     );
 }
 
