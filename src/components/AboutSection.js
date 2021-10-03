@@ -2,11 +2,11 @@ import React from 'react';
 import home1 from './../images/home1.png';
 
 // styled
-import styled from 'styled-components';
+import { ContainerStyled, DescriptionStyled, HideStyled, ImageStyled } from '../styles';
 
 const Aboutsection = () => {
     return (
-        <AboutStyled>
+        <ContainerStyled>
             <DescriptionStyled>
                 <div className="title">
                     <HideStyled>
@@ -27,39 +27,8 @@ const Aboutsection = () => {
             <ImageStyled>
                 <img src={ home1 } alt="photographer" />
             </ImageStyled>
-        </AboutStyled>
+        </ContainerStyled>
     );
 }
 
-// styled components
-const AboutStyled = styled.div`
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem 10rem;
-    color: #fff;
-`;
-
-const DescriptionStyled = styled.div`
-    flex: 1;
-    padding-right: 5rem;
-    h2 {
-        font-weight: lighter;
-    }
-`;
-
-const ImageStyled = styled.image`
-    flex: 1;
-    overflow: hidden;
-    img {
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-    }
-`;
-
-const HideStyled = styled.div`
-    overflow: hidden;
-`;
 export default Aboutsection;

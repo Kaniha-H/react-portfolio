@@ -6,4 +6,7 @@ This is a react portfolio project
 
 In the project directory, you can run:
 
-### `yarn start`
+```
+yarn
+yarn start
+```
