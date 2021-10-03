@@ -1,11 +1,62 @@
 import React from 'react';
+// styles
+import styled from 'styled-components';
+// route
+import { Link } from 'react-router-dom';
+// images
+import athlete from './../images/athlete-small.png';
+import theracer from './../images/theracer-small.png';
+import goodtimes from './../images/goodtimes-small.png';
 
 const Ourwork = () => {
     return (
-        <div>
-            <h1>Our work</h1>
-        </div>
+        <WorkStyled>
+            <MovieStyled>
+                <h2>The Athlete</h2>
+                <div className="line"></div>
+                <Link>
+                    <img src={ athlete } alt="athlete" />
+                </Link>
+            </MovieStyled>
+            <MovieStyled>
+                <h2>The Racer</h2>
+                <div className="line"></div>
+                <Link>
+                    <img src={ theracer } alt="theracer" />
+                </Link>
+            </MovieStyled>
+            <MovieStyled>
+                <h2>Good Times</h2>
+                <div className="line"></div>
+                <Link>
+                    <img src={ goodtimes } alt="goodtimes" />
+                </Link>
+            </MovieStyled>
+        </WorkStyled>
     );
-}
+};
+
+const WorkStyled = styled.div`
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 5rem 10rem;
+    h2 {
+        padding: 1rem 0;
+    }
+`;
+
+const MovieStyled = styled.div`
+    padding-bottom: 10rem;
+    .line {
+        height: .5rem;
+        background: #ccc;
+        margin-bottom: 3rem;
+    }
+    img {
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+    }
+`;
 
 export default Ourwork;
