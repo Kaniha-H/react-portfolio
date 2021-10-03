@@ -14,21 +14,21 @@ const Ourwork = () => {
             <MovieStyled>
                 <h2>The Athlete</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/the-athlete">
                     <img src={ athlete } alt="athlete" />
                 </Link>
             </MovieStyled>
             <MovieStyled>
                 <h2>The Racer</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/the-racer">
                     <img src={ theracer } alt="theracer" />
                 </Link>
             </MovieStyled>
             <MovieStyled>
                 <h2>Good Times</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/good-times">
                     <img src={ goodtimes } alt="goodtimes" />
                 </Link>
             </MovieStyled>
@@ -42,6 +42,7 @@ const WorkStyled = styled.div`
     padding: 5rem 10rem;
     h2 {
         padding: 1rem 0;
+        color: #fff;
     }
 `;
 
@@ -49,7 +50,7 @@ const MovieStyled = styled.div`
     padding-bottom: 10rem;
     .line {
         height: .5rem;
-        background: #ccc;
+        background: #1db57d;
         margin-bottom: 3rem;
     }
     img {
