@@ -1,26 +1,40 @@
 import React from 'react';
 import home1 from './../images/home1.png';
-
 // styled
 import { ContainerStyled, DescriptionStyled, HideStyled, ImageStyled } from '../styles';
+// Framer Motion
+import { motion } from 'framer-motion';
 
 const Aboutsection = () => {
+    const titleAnim = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { duration: 2 } },
+    };
+    const container = {
+        hidden: { x: 100 },
+        show: { x: 0, transition: { duration: .75, ease: "easeOut", staggerChildren: 1 } }
+    };
     return (
         <ContainerStyled>
             <DescriptionStyled>
-                <div className="title">
+                <motion.div 
+                    className="title" 
+                    variants={container}
+                    initial="hidden" 
+                    animate="show"
+                >
                     <HideStyled>
-                        <h2>We work to make</h2>
+                        <motion.h2 variants={titleAnim}>We work to make</motion.h2>
                     </HideStyled>
                     <HideStyled>
-                        <h2>
+                        <motion.h2 variants={titleAnim}>
                             your <span>dreams</span> come
-                        </h2>
+                        </motion.h2>
                     </HideStyled>
                     <HideStyled>
-                        <h2>true.</h2>
+                        <motion.h2 variants={titleAnim}>true.</motion.h2>
                     </HideStyled>
-                </div>
+                </motion.div>
                 <p>Contact us for any photography or videography ideas that you have. We have professionnals with amazing skills</p>
                 <button>Contact Us</button>
             </DescriptionStyled>
