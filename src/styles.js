@@ -12,6 +12,7 @@ export const ContainerStyled = styled.div`
 export const DescriptionStyled = styled.div`
     flex: 1;
     padding-right: 5rem;
+    z-index: 2;
     h2 {
         font-weight: lighter;
     }
@@ -20,6 +21,7 @@ export const DescriptionStyled = styled.div`
 export const ImageStyled = styled.image`
     flex: 1;
     overflow: hidden;
+    z-index: 2;
     img {
         width: 100%;
         height: 80vh;

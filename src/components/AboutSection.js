@@ -5,6 +5,8 @@ import { ContainerStyled, DescriptionStyled, HideStyled, ImageStyled } from '../
 // Framer Motion
 import { motion } from 'framer-motion';
 import { titleAnim, fade, photoAnim } from '../animation';
+import Wave from './Wave';
+import styled from 'styled-components';
 
 const Aboutsection = () => {
   return (
@@ -29,8 +31,9 @@ const Aboutsection = () => {
         <ImageStyled>
           <motion.img variants={photoAnim} src={ home1 } alt="photographer" />
         </ImageStyled>
+        <Wave />
     </ContainerStyled>
   );
-}
+};
 
 export default Aboutsection;
